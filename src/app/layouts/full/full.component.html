@@ -1,0 +1,73 @@
+<!-- ============================================================== -->
+<!-- Main wrapper - style you can find in pages.scss -->
+<!-- ============================================================== -->
+<div class="main-container"> 
+    <!-- ============================================================== -->
+    <!-- Topbar - style you can find in header.scss -->
+    <!-- ============================================================== -->
+    <mat-toolbar color="white" class="topbar telative">
+        <!-- ============================================================== -->
+        <!-- Logo - style you can find in header.scss -->
+        <!-- ============================================================== -->
+        <div class="navbar-header">
+                              
+        </div>
+        <!-- ============================================================== -->
+        <!-- sidebar toggle -->
+        <!-- ============================================================== -->
+        <div>
+            <mat-chip-listbox aria-label="Fish selection">
+                <mat-chip-option selected>
+                    <img matChipAvatar src="https://i.pinimg.com/736x/e6/0f/f8/e60ff85956da6bb1f3cab04838cbce3f.jpg" alt="Photo of a Shiba Inu"/>
+                    Cajou</mat-chip-option>
+                <mat-chip-option>    <img matChipAvatar src="https://cdn.icon-icons.com/icons2/2577/PNG/512/chocolate_cocoa_plant_icon_153929.png" alt="Photo of a Shiba Inu"/>
+                    Cacao</mat-chip-option>
+                <mat-chip-option>    <img matChipAvatar src="https://cdn3.iconfinder.com/data/icons/miscellaneous-270-mix/168/rubber_rubber-tree_bowl_nature_latex_plant_branch_forest-512.png" alt="Photo of a Shiba Inu"/>
+                    Hévéa</mat-chip-option>
+                <mat-chip-option >    <img matChipAvatar src="https://cdn.vectorstock.com/i/1000x1000/35/75/shea-tree-eco-half-nut-icon-cartoon-style-vector-35163575.webp" alt="Photo of a Shiba Inu"/>
+                    Karité</mat-chip-option>
+            </mat-chip-listbox>
+        </div>
+       
+        <button mat-icon-button (click)="snav.toggle()" value="sidebarclosed">
+            <mat-icon>menu</mat-icon>
+        </button>
+        <!-- ============================================================== -->
+        <!-- app header component - style you can find in header.scss / header.component.ts-->
+        <!-- ============================================================== -->
+        <app-header class="d-flex align-items-center ml-auto"></app-header>
+    </mat-toolbar>
+    <!-- ============================================================== -->
+    <!-- End Topbar - style you can find in pages.scss -->
+    <!-- ============================================================== -->
+    <mat-sidenav-container class="example-sidenav-container" [style.marginTop.px]="mobileQuery.matches ? 0 : 0">
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+        <mat-sidenav #snav id="snav" class="dark-sidebar pl-xs" [mode]="mobileQuery.matches ? 'side' : 'over'" fixedTopGap="0" [opened]="mobileQuery.matches" [disableClose]="mobileQuery.matches"  >
+            
+                <app-sidebar></app-sidebar>
+               
+            
+        </mat-sidenav>
+        <!-- ============================================================== -->
+        <!-- Sidebar - style you can find in sidebar.scss -->
+        <!-- ============================================================== -->
+        
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+        <mat-sidenav-content class="page-wrapper">
+                 
+                <div class="page-content">
+                   
+                        <router-outlet><app-spinner></app-spinner></router-outlet>
+                    
+                </div>    
+               
+        </mat-sidenav-content>
+        <!-- ============================================================== -->
+        <!-- Page container - style you can find in pages.scss -->
+        <!-- ============================================================== -->
+    </mat-sidenav-container>
+</div>

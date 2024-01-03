@@ -1,0 +1,23 @@
+<div class="modal">
+  <div class="flex items-center" mat-dialog-title>
+    <h4 class="title" align="center">
+      {{ content.title }}
+    </h4>
+  </div>
+  
+  <mat-divider class="text-border"></mat-divider>
+  
+  <mat-dialog-content class="text-center">
+    <h5>
+      {{ content.message }}
+    </h5>
+  
+    <mat-dialog-actions align="center">
+      <button mat-button mat-dialog-close type="button">Non</button>
+      <button (click)="save()" color="primary" mat-flat-button type="submit">
+        Oui
+      </button>
+    </mat-dialog-actions>
+  </mat-dialog-content>
+  
+</div>

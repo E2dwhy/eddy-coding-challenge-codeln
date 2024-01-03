@@ -1,0 +1,9 @@
+.menu-item-hover {
+    background-color: #f1e5dd; /* Set your desired background color on hover */
+  }
+  
+  .menu-item-selected {
+    background-color: #f1e5dd; 
+    color: #cb7a4b; 
+  }
+  

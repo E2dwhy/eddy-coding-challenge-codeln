@@ -1,0 +1,72 @@
+<!-- <div class="container">
+  <h2>Create Warehouse</h2>
+  <form [formGroup]="warehouseForm" (ngSubmit)="add()">
+     <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Label</mat-label>
+         <input matInput formControlName="label" required>
+       </mat-form-field>
+     </div>
+     <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Superficie (m 2)</mat-label>
+         <input matInput formControlName="superficie" required>
+       </mat-form-field appearance="outline">
+     </div>
+     <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Longitude</mat-label>
+         <input matInput formControlName="longitude" required>
+       </mat-form-field>
+     </div>
+     <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Latitude</mat-label>
+         <input matInput formControlName="latitude" required>
+       </mat-form-field>
+     </div>
+     <button mat-raised-button color="primary" type="submit">Submit</button>
+     <button mat-raised-button color="warn" type="button">Cancel</button>
+  </form>
+ </div> -->
+ 
+ <div class="container">
+  <h2>Create Warehouse</h2>
+
+  <form [formGroup]="warehouseForm" (ngSubmit)="add()" class="form-container">
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Libelle</mat-label>
+        <input matInput placeholder="" formControlName="label">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Longitude</mat-label>
+        <input matInput placeholder="" formControlName="longitude">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Latitude</mat-label>
+        <input matInput placeholder="" formControlName="latitude">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Superficie</mat-label>
+        <input type="number" matInput placeholder="" formControlName="area">
+      </mat-form-field>
+    </div>
+    <div class="form-group">
+      <mat-form-field appearance="outline">
+        <mat-label>Placer</mat-label>
+        <input matInput placeholder="" formControlName="address">
+      </mat-form-field>
+    </div>
+    <div class="buttons-container">
+      <button mat-raised-button color="secondary" type="button">Annuler</button>
+      <button mat-raised-button color="primary" type="submit" [disabled]="warehouseForm.invalid">Enregistrer</button>
+    </div>
+  </form>
+</div>

@@ -1,0 +1,28 @@
+        
+<!-- ============================================================== -->
+<!-- Profile - style you can find in header.scss -->
+<!-- ============================================================== -->
+
+<a href="#" class="notifications m-r-20 hidden-sm-up" mat-raised-button color="#1474bf">12<mat-icon>notifications</mat-icon></a>
+<!-- <mat-form-field appearance="fill">
+    <mat-label></mat-label>
+    <mat-select>
+      <mat-select-trigger>
+        <span class="flag-icon" [ngClass]="'flag-icon-' + selectedLanguage"></span>
+      </mat-select-trigger>
+      <mat-option value="en" class="flag-icon flag-icon-us">FR</mat-option>
+      <mat-option value="fr" class="flag-icon flag-icon-fr" selected>EN</mat-option>
+    </mat-select>
+</mat-form-field> -->
+<button [matMenuTriggerFor]="profile" mat-button class="m-r-5 p-0 d-flex jc-c align-items-center">{{ user.name }}<mat-icon matsufic>arrow_drop_down</mat-icon></button>
+<mat-menu #profile="matMenu" class="mymegamenu">
+    <button mat-menu-item>
+        <mat-icon>settings</mat-icon> Settings </button>
+    <button mat-menu-item>
+        <mat-icon>account_box</mat-icon> Profile </button>
+    <button mat-menu-item>
+        <mat-icon>notifications_off</mat-icon> Disable notifications </button>
+    <button mat-menu-item>
+        <mat-icon>exit_to_app</mat-icon> Sign Out </button>
+</mat-menu>
+
